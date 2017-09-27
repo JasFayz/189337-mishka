@@ -1,14 +1,20 @@
 .main-nav__list {
+  margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
+.main-nav__item {
+  position: relative;
+}
+
 .main-nav__item a {
   display: block;
-  padding: 34px 76px;
+  padding: 34px 0;
 
   line-height: 24px;
+  text-align: center;
   color: #000000;
 
   text-decoration: none;
@@ -24,3 +30,67 @@
     color: rgba(0, 0, 0, 0.3);
   }
 }
+
+.main-nav__logo {
+  position: relative;
+
+  background: url("../../img/logo-mobile.svg") no-repeat center center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  width: 21px;
+  height: 20px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  transform: translate(-50%, -50%);
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    width: 20px;
+    height: 14px;
+
+    background-color: #000000;
+
+    transform: translate(-50%, -50%);
+
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+
+    width: 22px;
+    height: 10px;
+    box-sizing: border-box;
+
+    background-color: transparent;
+    border-top: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+
+    transform: translate(-50%, -50%);
+
+    content: "";
+  }
+}
+
+
