@@ -1,4 +1,13 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+}
+
 .main-nav__list {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
   margin: 0;
   padding: 0;
 
@@ -7,19 +16,23 @@
 
 .main-nav__item {
   position: relative;
+
+  flex-basis: 72px;
+
+  background-color: #f6f6f6;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
 }
 
 .main-nav__item a {
   display: block;
-  padding: 34px 0;
+  width: 100%;
+  padding: 28px 0;
 
   line-height: 24px;
   text-align: center;
   color: #000000;
-
   text-decoration: none;
 
-  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
 
   &:hover {
     color: rgba(0, 0, 0, 0.6);

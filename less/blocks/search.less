@@ -1,19 +1,28 @@
 .search {
-  width: 100%;
+  position: relative;
+
   padding: 34px 45px;
+
+  background-color: #f6f6f6;
+}
+
+.search__placeholder {
+  position: absolute;
+  left: 60px;
+
+  font-size: 17px;
+  line-height: 24px;
 }
 
 .search__field {
   border: none;
   outline: none;
 
-  &::placeholder {
-    font-size: 17px;
-    line-height: 24px;
-    font-weight: 700;
-    font-family: "Open Sans", "Arial", sans-serif;
-    color: #000000;
+  &:active + .search__placeholder,
+  &:focus + .search__placeholder {
+    display: none;
   }
+
 }
 
 .search__button {
