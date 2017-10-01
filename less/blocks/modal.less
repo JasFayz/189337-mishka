@@ -1,7 +1,19 @@
+.modal {
+  width: 260px;
+  height: 338px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.modal__close {
+  display: none;
+}
+
 .modal__title {
   font-size: 25px;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .modal__description {
@@ -9,6 +21,30 @@
   line-height: 30px;
   font-weight: 400;
   color: #444444;
+  text-align: center;
+}
+
+.modal__label {
+  display: inline-block;
+
+  width: 82px;
+  height: 52px;
+  padding: 18px 0;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border: 2px solid #f2f2f2;
+
+  cursor: pointer;
+}
+
+.modal__input {
+  display: none;
+
+  &:checked + .modal__label {
+    border: 2px solid #97e0d2;
+  }
 }
 
 .modal__button {

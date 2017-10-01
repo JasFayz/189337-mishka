@@ -146,15 +146,15 @@
     </footer>
     <section class="modal">
       <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
-      <h2 class="modal__title">Добавить в корзину</h2>
+      <h2 class="modal__title">Добавить<br>в корзину</h2>
       <p class="modal__description">Выберите размер:</p>
       <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
-        <label for="small"><span class="visually-hidden">Small</span></label>
         <input class="modal__input" type="radio" id="small" name="toggle" checked>
-        <label for="medium"><span class="visually-hidden">Medium</span></label>
+        <label class="modal__label" for="small">S</label>
         <input class="modal__input" type="radio" id="medium" name="toggle">
-        <label for="large"><span class="visually-hidden">Large</span></label>
+        <label class="modal__label" for="medium">M</label>
         <input class="modal__input" type="radio" id="large" name="toggle">
+        <label class="modal__label" for="large">L</label>
         <button class="modal__button  button" type="submit">Добавить</button>
       </form>
     </section>
