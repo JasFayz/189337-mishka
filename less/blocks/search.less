@@ -28,6 +28,10 @@
   line-height: 24px;
 
   transform: translateY(-50%);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .search__field {
@@ -42,6 +46,10 @@
 
   &:active + .search__placeholder,
   &:focus + .search__placeholder {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }
