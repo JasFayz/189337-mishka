@@ -2,15 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка - Каталог</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav wrapper">
+      <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__logo"><span
+            <a class="main-nav__logo" href="index.html"><span
               class="visually-hidden">Главная страница интернет магазина «Мишка»</span></a>
             <button class="main-nav__toggle main-nav__toggle--close" type="button">Открыть меню</button>
           </li>
@@ -29,53 +30,58 @@
         </ul>
       </nav>
     </header>
-    <main class="page-main wrapper">
+    <main class="page-main">
       <section class="catalog">
         <h1 class="page-main__title">Каталог товаров</h1>
-        <article class="catalog__item">
-          <img class="catalog__image" width="260" height="196" alt="Зайчик-попрыгайчик" src="img/photo-hare-mobile@1x.jpg">
-          <div class="catalog__wrapper">
-            <h2 class="catalog__item-title">Зайчик-попрыгайчик</h2>
-            <p class="catalog__description">Рост 30 см, вес 200 г</p>
-            <div class="catalog__order">
-              <b class="catalog__price">1200 руб.</b>
-              <a href="" class="catalog__link"><span class="visually-hidden">Добавить в корзину</span></a>
+        <div class="catalog__inner">
+          <article class="catalog__item">
+            <img class="catalog__image" width="260" height="196" alt="Зайчик-попрыгайчик" src="img/photo-hare-mobile@1x.jpg">
+            <div class="catalog__wrapper">
+              <h2 class="catalog__item-title">Зайчик-попрыгайчик</h2>
+              <p class="catalog__description">Рост 30 см, вес 200 г</p>
+              <div class="catalog__order">
+                <b class="catalog__price">1200 руб.</b>
+                <a href="" class="catalog__link"><span class="visually-hidden">Добавить в корзину</span></a>
+              </div>
             </div>
-          </div>
-        </article>
-        <article class="catalog__item">
-          <img class="catalog__image" width="260" height="196" alt="Корзинка для белья" src="img/photo-bowl-mobile@1x.jpg">
-          <div class="catalog__wrapper">
-            <h2 class="catalog__item-title">Корзинка для белья</h2>
-            <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
-            <div class="catalog__order">
-              <b class="catalog__price">690 руб.</b>
-              <a href="" class="catalog__link"><span class="visually-hidden">Добавить в корзину</span></a>
+          </article>
+          <article class="catalog__item">
+            <img class="catalog__image" width="260" height="196" alt="Корзинка для белья"
+                 src="img/photo-bowl-mobile@1x.jpg">
+            <div class="catalog__wrapper">
+              <h2 class="catalog__item-title">Корзинка для белья</h2>
+              <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
+              <div class="catalog__order">
+                <b class="catalog__price">690 руб.</b>
+                <a href="" class="catalog__link"><span class="visually-hidden">Добавить в корзину</span></a>
+              </div>
             </div>
-          </div>
-        </article>
-        <article class="catalog__item">
-          <img class="catalog__image" width="260" height="196" alt="Большая корзинка для игрушек" src="img/photo-toys-mobile@1x.jpg">
-          <div class="catalog__wrapper">
-            <h2 class="catalog__item-title">Большая корзинка для игрушек</h2>
-            <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
-            <div class="catalog__order">
-              <b class="catalog__price">1 500 руб.</b>
-              <a href="" class="catalog__link"><span class="visually-hidden">Добавить в корзину</span></a>
+          </article>
+          <article class="catalog__item">
+            <img class="catalog__image" width="260" height="196" alt="Большая корзинка для игрушек"
+                 src="img/photo-toys-mobile@1x.jpg">
+            <div class="catalog__wrapper">
+              <h2 class="catalog__item-title">Большая корзинка для игрушек</h2>
+              <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
+              <div class="catalog__order">
+                <b class="catalog__price">1 500 руб.</b>
+                <a href="" class="catalog__link"><span class="visually-hidden">Добавить в корзину</span></a>
+              </div>
             </div>
-          </div>
-        </article>
-        <article class="catalog__item">
-          <h2 class="catalog__item-title catalog__item-title--info">Процесс производства</h2>
-          <img class="catalog__video" width="260" height="150" src="img/video-mobile@1x.jpg">
-          <div class="catalog__wrapper">
-            <p class="catalog__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="catalog__button button" href="#">Сделать заказ</a>
-          </div>
-        </article>
+          </article>
+          <article class="catalog__item">
+            <h2 class="catalog__item-title catalog__item-title--info">Процесс производства</h2>
+            <video src="catalog__video" width="260" height="150" poster="img/video-mobile@1x.jpg"></video>
+            <button class="catalog__video-control"><span class="visually-hidden">Запустить видео</span></button>
+            <div class="catalog__wrapper">
+              <p class="catalog__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+              <a class="catalog__button button" href="#">Сделать заказ</a>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
-    <footer class="page-footer wrapper">
+    <footer class="page-footer">
       <div class="page-footer__social social">
         <h2 class="visually-hidden">Мы в социальных сетях!</h2>
         <ul class="social__list">
