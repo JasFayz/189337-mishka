@@ -3,11 +3,18 @@
   margin: 0;
 
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
 }
 
 .product__link {
   display: block;
   padding: 28px 30px;
+  box-sizing: border-box;
 
   color: #ffffff;
 
@@ -37,5 +44,9 @@
   &--toys:active,
   &--toys:focus {
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 334px;
   }
 }
