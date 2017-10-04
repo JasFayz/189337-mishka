@@ -1,0 +1,145 @@
+.reviews {
+  width: 260px;
+  margin-bottom: 95px;
+  padding: 0 30px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 668px;
+    padding: 0 50px;
+  }
+}
+
+.reviews__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+
+  font-size: 25px;
+  line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+    margin-right: 314px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+.reviews__slider {
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+}
+
+.reviews__slide {
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.reviews__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.reviews__description {
+  margin: 0;
+  padding: 0;
+
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.reviews__author {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.reviews__author-name {
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+}
+
+.reviews__link {
+  line-height: 30px;
+  font-weight: 400;
+  color: #444444;
+
+  text-decoration: none;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active,
+  &:focus {
+    color: #46c1ae;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
+  }
+}
+
+.reviews__control {
+  display: flex;
+}
+
+.reviews__prev,
+.reviews__next {
+  width: 129px;
+  height: 50px;
+  box-sizing: border-box;
+
+  border: 1px solid #ececec;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+.reviews__prev {
+  background: url("../../img/icon-left-arrow.svg") center center no-repeat;
+}
+
+.reviews__next {
+  background: url("../../img/icon-right-arrow.svg") center center no-repeat;
+  border-left: none;
+}
+
+.reviews__button {
+  @media (min-width: @tablet-width) {
+    order: 2;
+
+    width: 171px;
+  }
+}

@@ -1,0 +1,257 @@
+.main-nav {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    height: 88px;
+
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.main-nav__list-left {
+  @media (min-width: @tablet-width) {
+    order: 3;
+
+    width: 337px;
+    padding-left: 50px;
+  }
+}
+
+.main-nav__list-left a {
+  @media (min-width: @tablet-width) {
+    width: 167px;
+
+    text-align: left;
+  }
+}
+
+.main-nav__list-right {
+  @media (min-width: @tablet-width) {
+    order: 2;
+
+    width: 398px;
+    padding-right: 50px;
+    box-sizing: border-box;
+  }
+}
+
+.main-nav__item a {
+  position: relative;
+
+  display: block;
+  padding: 28px 0 28px 76px;
+  box-sizing: border-box;
+
+  color: #000000;
+  text-decoration: none;
+
+  background-color: #f6f6f6;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active,
+  &:focus {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 0;
+
+    background: none;
+    box-shadow: none;
+  }
+}
+
+.main-nav__item--search {
+  @media (min-width: @tablet-width) {
+    border-left: 1px solid #ececec;
+  }
+}
+
+.main-nav__item--search a {
+  &:hover ~ .main-nav__item--search-icon {
+    path {
+      fill: #d3d2d2;
+    }
+  }
+
+  &:active ~ .main-nav__item--search-icon {
+    path {
+      fill: #d0f1ea;
+    }
+  }
+
+  &:focus ~ .main-nav__item--search-icon {
+    path {
+      fill: #63d1bb;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 82px;
+    height: 88px;
+
+    font-size: 0;
+
+    border-right: 1px solid #ececec;
+  }
+}
+
+.main-nav__item--basket a {
+  @media (min-width: @tablet-width) {
+    width: 265px;
+
+    padding: 32px 0 32px 82px;
+  }
+}
+
+.main-nav__item--delivery {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    order: 4;
+
+    display: block;
+    padding-right: 50px;
+
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #444444;
+
+    text-decoration: none;
+  }
+}
+
+.main-nav__item--delivery a {
+  @media (min-width: @tablet-width) {
+    height: auto;
+
+    padding: 0 21px;
+  }
+}
+
+.main-nav__logo {
+  padding: 19px 0 19px 106px;
+
+  background-color: #f6f6f6;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-shrink: 0;
+    order: 1;
+
+    width: 370px;
+    padding: 21px 0 21px 50px;
+    box-sizing: border-box;
+
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.main-nav__logo img {
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    margin-left: -2px;
+  }
+}
+
+.main-nav__item--search-icon {
+  position: absolute;
+  top: 50%;
+  left: 33px;
+
+  transform: translate(-50%, -50%);
+
+  @media (min-width: @tablet-width) {
+    left: 50%;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 38px;
+  right: 31px;
+
+  width: 21px;
+  height: 20px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  transform: translate(-50%, -50%);
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    width: 20px;
+    height: 14px;
+
+    background-color: #000000;
+
+    transform: translate(-50%, -50%);
+
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+
+    width: 22px;
+    height: 10px;
+    box-sizing: border-box;
+
+    background-color: transparent;
+    border-top: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+
+    transform: translate(-50%, -50%);
+
+    content: "";
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
