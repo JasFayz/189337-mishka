@@ -1,6 +1,11 @@
 .info {
   width: 260px;
   padding: 0 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    padding: 0 50px;
+  }
 }
 
 .info__title {
@@ -11,11 +16,25 @@
 
   font-size: 25px;
   line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 59px;
+    margin-bottom: 104px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .info__list {
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
+
 
 .info__item {
   margin-bottom: 90px;
@@ -23,4 +42,12 @@
   line-height: 20px;
 
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    width: 334px;
+    margin-bottom: 114px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
