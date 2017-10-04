@@ -9,15 +9,15 @@
   <body>
     <header class="page-header">
       <nav class="main-nav">
-        <ul class="main-nav__list main-nav__list-left">
-          <li class="main-nav__item">
-            <a class="main-nav__logo"><img src="img/logo-mobile.svg" alt="Логотипа интернет магазина Мишка"></a>
-            <button class="main-nav__toggle main-nav__toggle--close" type="button">Открыть меню</button>
-          </li>
+        <a class="main-nav__logo" href="index.html">
+          <img src="img/logo-mobile.svg" alt="Логотипа интернет магазина Мишка">
+        </a>
+        <button class="main-nav__toggle main-nav__toggle--open" type="button">Открыть меню</button>
+        <ul class="main-nav__list main-nav__list-left hide">
           <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
           <li class="main-nav__item"><a href="order.html">Вязание на заказ</a></li>
         </ul>
-        <ul class="main-nav__list main-nav__list-right">
+        <ul class="main-nav__list main-nav__list-right hide">
           <li class="main-nav__item main-nav__item--search">
             <a href="search.html">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="main-nav__item--search-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
@@ -32,8 +32,8 @@
             </form>
           </li>
           <li class="main-nav__item main-nav__item--basket"><a href="basket.html">Корзина: пока пуста</a></li>
-          <li class="main-nav__item main-nav__item--delivery"><a href="delivery.html">Бесплатная доставка по всей России</a></li>
         </ul>
+        <span class="main-nav__item--delivery">Бесплатная доставка по всей России</span>
       </nav>
     </header>
     <main class="page-main">
