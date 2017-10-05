@@ -186,15 +186,24 @@
   }
 }
 
-.main-nav__item--search-icon {
+.main-nav__item--search-icon,
+.main-nav__item--basket-icon {
   position: absolute;
   top: 50%;
   left: 33px;
 
   transform: translate(-50%, -50%);
+}
 
+.main-nav__item--search-icon {
   @media (min-width: @tablet-width) {
     left: 50%;
+  }
+}
+
+.main-nav__item--basket-icon {
+  @media (min-width: @tablet-width) {
+    left: 41px;
   }
 }
 
