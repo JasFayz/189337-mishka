@@ -9,8 +9,6 @@
 }
 
 .info__title {
-  margin: 0;
-  padding: 0;
   margin-top: 76px;
   margin-bottom: 88px;
 
@@ -27,7 +25,7 @@
 }
 
 .info__list {
-  padding: 0;
+  .list-reset();
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -40,8 +38,6 @@
   margin-bottom: 90px;
 
   line-height: 20px;
-
-  list-style: none;
 
   @media (min-width: @tablet-width) {
     width: 334px;
