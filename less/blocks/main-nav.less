@@ -17,10 +17,10 @@
 }
 
 .main-nav__list {
+  .list-reset();
+
   display: flex;
   flex-direction: column;
-
-  .list-reset();
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -61,7 +61,6 @@
 
   display: block;
   padding: 28px 0 28px 76px;
-  box-sizing: border-box;
 
   color: #000000;
   text-decoration: none;
