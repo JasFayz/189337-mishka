@@ -10,13 +10,16 @@
   border: none;
 
   &--gray {
-    background-color: #f1f1f1;
+    @media (min-width: @tablet-width) {
+      background-color: #f1f1f1;
+    }
   }
 }
 
 .filter__wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
+    justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 50px;
   }
@@ -25,6 +28,8 @@
 .filter__field-title {
   position: relative;
 
+  display: block;
+  margin-bottom: 35px;
   padding: 0;
 
   text-transform: uppercase;
@@ -54,6 +59,10 @@
 
 .filter__inner {
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    width: 501px;
+  }
 }
 
 .filter__description {
@@ -61,8 +70,17 @@
   line-height: 16px;
   font-weight: 400;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
 }
 
 .filter__button {
   background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+    width: 230px;
+  }
 }
