@@ -4,10 +4,14 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
-
     margin-top: -117px;
     padding: 0 50px;
+  }
+}
+
+.product__item {
+  @media(min-width: @tablet-width) {
+    flex-grow: 1;
   }
 }
 
@@ -50,7 +54,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 334px;
+
+    width: 100%;
     padding-top: 28px;
     padding-bottom: 29px;
 

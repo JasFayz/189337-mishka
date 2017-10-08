@@ -1,14 +1,16 @@
 .reviews {
-  width: 260px;
   margin-bottom: 95px;
-  padding: 0 30px;
 
   @media (min-width: @tablet-width) {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: flex-start;
-    width: 668px;
-    padding: 0 50px;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 175px;
+    box-sizing: border-box;
   }
 }
 

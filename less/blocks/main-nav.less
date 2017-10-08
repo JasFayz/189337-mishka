@@ -1,6 +1,4 @@
 .main-nav {
-  position: relative;
-
   display: flex;
   flex-direction: column;
 
@@ -28,9 +26,17 @@
 }
 
 .main-nav__list-left {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     order: 3;
     width: 337px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    justify-content: space-between;
+    width: 376px;
   }
 }
 
@@ -39,6 +45,10 @@
     width: 167px;
 
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 188px;
   }
 }
 
@@ -126,6 +136,19 @@
   }
 }
 
+.main-nav__list-adds {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 315px;
+    order: 4;
+
+    font-size: 15px;
+  }
+}
+
 .main-nav__item--delivery {
   display: none;
 
@@ -141,6 +164,10 @@
 
     text-decoration: none;
   }
+
+  @media (min-width: @desktop-width) {
+    order: 5;
+  }
 }
 
 .main-nav__item--delivery a {
@@ -152,7 +179,10 @@
 }
 
 .main-nav__logo {
+  display: block;
+  width: 100%;
   padding: 19px 0 19px 106px;
+  box-sizing: border-box;
 
   background-color: #f6f6f6;
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
@@ -169,13 +199,17 @@
   @media (min-width: @tablet-width) {
     flex-shrink: 0;
     order: 1;
-
     width: 320px;
     padding: 21px 0;
-    box-sizing: border-box;
 
     background-color: transparent;
     box-shadow: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+    width: 250px;
+    margin-left: auto;
   }
 }
 
@@ -209,6 +243,7 @@
 
 .main-nav__toggle {
   position: absolute;
+  z-index: 2;
 
   width: 21px;
   height: 20px;
@@ -293,21 +328,13 @@
     display: none;
   }
 
-  .main-nav--opened .main-nav__list-left,
-  .main-nav--opened .main-nav__list-right {
+  .main-nav--opened.main-nav {
     position: absolute;
-    z-index: 10;
+    top: 0;
+    z-index: 1;
 
     display: block;
     width: 100%;
-  }
-
-  .main-nav--opened .main-nav__list-left {
-    top: 79px;
-  }
-
-  .main-nav--opened .main-nav__list-right {
-    top: 238px;
   }
 
   .main-nav--nojs .main-nav__list-left,
