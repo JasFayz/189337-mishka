@@ -23,6 +23,10 @@
     align-items: flex-start;
     margin-bottom: 50px;
   }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .filter__field-title {
@@ -55,6 +59,10 @@
     width: 167px;
     box-sizing: border-box;
   }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
 }
 
 .filter__inner {
@@ -62,6 +70,10 @@
 
   @media (min-width: @tablet-width) {
     width: 501px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
   }
 }
 
@@ -74,6 +86,11 @@
   @media (min-width: @tablet-width) {
     order: 2;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: auto;
+    margin-right: 175px;
+  }
 }
 
 .filter__button {
@@ -82,5 +99,10 @@
   @media (min-width: @tablet-width) {
     order: 1;
     width: 230px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: auto;
+    margin-left: 175px;
   }
 }
