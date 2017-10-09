@@ -1,4 +1,6 @@
 .info {
+  margin-bottom: 55px;
+
   @media (min-width: @desktop-width) {
     padding-left: 175px;
     box-sizing: border-box;
@@ -42,6 +44,11 @@
 
     content: "";
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media (min-width: @tablet-width) {
     width: 334px;
     margin-bottom: 114px;
