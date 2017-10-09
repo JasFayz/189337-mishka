@@ -2,10 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 27px 69px;
+  padding: 27px 39px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+  }
 }
 
 .copyright__text {
+  padding-right: 30px;
+
   font-size: 19px;
   line-height: 23px;
 }
@@ -14,10 +20,10 @@
   display: block;
   width: 27px;
   height: 34px;
-}
 
-.copyright__link--icon {
-  path {
-    fill: #63d1bb;
+  &--icon {
+    path {
+      fill: #63d1bb;
+    }
   }
 }

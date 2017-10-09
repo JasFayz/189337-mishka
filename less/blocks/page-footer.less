@@ -1,12 +1,23 @@
 .page-footer {
-  .wrapper();
   background-color: #f1f1f1;
 }
 
-.page-footer__logo {
-  display: block;
-  width: 102px;
-  height: 34px;
+.page-footer__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
-  background: url("../../img/logo-mobile.svg") center center no-repeat;
+.page-footer__logo {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 102px;
+    height: 34px;
+
+    background: url("../img/logo-mobile.svg") center center no-repeat;
+  }
 }
