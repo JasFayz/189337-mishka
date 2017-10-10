@@ -24,9 +24,8 @@
 
   display: none;
   width: 260px;
-  height: 338px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 37px 30px 46px 30px;
 
   background-color: #ffffff;
   border: 1px solid #c6c6c6;
@@ -42,6 +41,8 @@
 }
 
 .modal__title {
+  .head-reset();
+
   font-size: 25px;
   line-height: 30px;
   text-transform: uppercase;
@@ -49,6 +50,9 @@
 }
 
 .modal__description {
+  margin-top: 17px;
+  margin-bottom: 21px;
+
   font-size: 15px;
   line-height: 30px;
   font-weight: 400;
@@ -56,12 +60,16 @@
   text-align: center;
 }
 
-.modal__label {
-  display: inline-block;
+.modal__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+.modal__label {
   width: 82px;
   height: 52px;
-  padding: 18px 0;
+  padding: 12px 0;
   box-sizing: border-box;
 
   text-align: center;
@@ -80,6 +88,8 @@
 }
 
 .modal__button {
+  margin-top: 31px;
+
   color: #ffffff;
 
   background-color: #63d1bb;

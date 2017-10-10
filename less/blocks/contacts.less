@@ -124,12 +124,45 @@
 }
 
 .contacts__map {
+  position: relative;
+
+  width: 100%;
+  height: 457px;
   margin-bottom: 34px;
 
   @media (min-width: @desktop-width) {
     width: 525px;
     margin-bottom: 0;
   }
+
+  & img {
+    display: none;
+  }
+
+  &--nojs {
+    width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &--nojs img {
+    display: block;
+  }
+}
+
+.contacts__map--nojs::after {
+  position: absolute;
+  top: 194px;
+  left: 170px;
+
+  width: 67px;
+  height: 100px;
+
+  background: url("../img/icon-map-pin.svg") center center no-repeat;
+
+  transform: translate(-50%, -50%);
+
+  content: "";
 }
 
 .contacts__button {
