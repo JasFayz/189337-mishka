@@ -67,8 +67,9 @@
 
   @media (min-width: @desktop-width) {
     width: 35%;
-    margin-top: -286px;
+    margin-top: -306px;
     margin-left: auto;
+    padding-top: 20px;
   }
 }
 
@@ -103,11 +104,19 @@
 .catalog__item--info .catalog__item-title {
   @media (min-width: @tablet-width) {
     order: 2;
+    width: 100%;
     padding-top: 40px;
     padding-left: 65px;
+    box-sizing: border-box;
 
     border-top: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-left: 1px solid #ececec;
     border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 35%;
   }
 }
 

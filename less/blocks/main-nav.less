@@ -30,33 +30,48 @@
 
   @media (min-width: @tablet-width) {
     order: 3;
-    width: 337px;
   }
 
   @media (min-width: @desktop-width) {
     order: 1;
     justify-content: space-between;
-    width: 376px;
   }
 }
 
 .main-nav__list-left a {
   @media (min-width: @tablet-width) {
-    width: 167px;
-
     text-align: left;
+    padding-right: 37px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 188px;
+    padding-right: 36px;
+  }
+}
+
+.main-nav__item--border {
+  position: relative;
+
+  padding-left: 36px;
+
+  &::before {
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      left: 0;
+
+      width: 1px;
+      height: 100%;
+
+      background-color: #ececec;
+
+      content: "";
+    }
   }
 }
 
 .main-nav__list-right {
   @media (min-width: @tablet-width) {
     order: 2;
-
-    width: 347px;
   }
 }
 
@@ -64,7 +79,9 @@
   position: relative;
 
   display: block;
-  padding: 28px 0 28px 76px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 76px;
 
   color: #000000;
   text-decoration: none;
@@ -82,10 +99,28 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 24px 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 0;
 
     background: none;
     box-shadow: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.main-nav__item--active a {
+  &:hover {
+    color: #000000;
+  }
+
+  &:active,
+  &:focus {
+    color: #000000;
   }
 }
 
@@ -129,10 +164,7 @@
 
 .main-nav__item--basket a {
   @media (min-width: @tablet-width) {
-    width: 265px;
-
     padding: 32px 0 32px 82px;
-    box-sizing: border-box;
   }
 }
 
@@ -141,11 +173,15 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    justify-content: space-between;
-    width: 315px;
     order: 4;
 
     font-size: 15px;
+  }
+}
+
+.main-nav__list-adds a {
+  @media (min-width: @desktop-width) {
+    padding-right: 60px;
   }
 }
 
@@ -209,7 +245,7 @@
   @media (min-width: @desktop-width) {
     order: 2;
     width: 250px;
-    margin-left: auto;
+    padding-left: 4px;
   }
 }
 
