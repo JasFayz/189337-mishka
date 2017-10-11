@@ -1,31 +1,39 @@
-.copyright {
+.copyright__text {
+  padding-right: 5px;
+}
+
+.copyright__link {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 18px 30px 23px 39px;
+  align-items: flex-start;
+  padding: 25px 39px 30px 40px;
+  font-size: 19px;
+  line-height: 23px;
+  color: #000000;
+
+  text-decoration: none;
 
   @media (min-width: @tablet-width) {
     padding-right: 0;
   }
+
+  &:hover .copyright__icon-academy,
+  &:active .copyright__icon-academy,
+  &:focus .copyright__icon-academy {
+    fill: #46c1ae;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
 }
 
-.copyright__text {
-  padding-right: 5px;
-
-  font-size: 19px;
-  line-height: 23px;
-}
-
-.copyright__link {
+.copyright__icon-academy {
   display: block;
   width: 27px;
   height: 34px;
-  padding-top: 3px;
-  padding-right: 8px;
+  margin-top: -4px;
 
-  &--icon {
-    path {
-      fill: #63d1bb;
-    }
-  }
+  fill: #63d1bb;
 }

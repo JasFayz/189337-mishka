@@ -5,7 +5,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 
     height: 88px;
@@ -21,58 +21,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-  }
-}
-
-.main-nav__list-left {
-  position: relative;
-
-  @media (min-width: @tablet-width) {
-    order: 3;
-  }
-
-  @media (min-width: @desktop-width) {
-    order: 1;
-    justify-content: space-between;
-  }
-}
-
-.main-nav__list-left a {
-  @media (min-width: @tablet-width) {
-    text-align: left;
-    padding-right: 37px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-right: 36px;
-  }
-}
-
-.main-nav__item--border {
-  @media (min-width: @desktop-width) {
-    position: relative;
-
-    padding-left: 36px;
-  }
-  &::before {
-    @media (min-width: @desktop-width) {
-      position: absolute;
-      left: 0;
-
-      width: 1px;
-      height: 100%;
-
-      background-color: #ececec;
-
-      content: "";
-    }
-  }
-}
-
-.main-nav__list-right {
-  @media (min-width: @tablet-width) {
-    order: 2;
+    align-items: flex-start;
   }
 }
 
@@ -100,17 +49,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 24px;
-    padding-bottom: 24px;
     padding-left: 0;
 
     background: none;
     box-shadow: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
@@ -127,11 +69,10 @@
 
 .main-nav__item--search a {
   @media (min-width: @tablet-width) {
-    width: 17.6px;
-    height: 17.6px;
-    padding: 36px 31px 33px 33px;
-    box-sizing: border-box;
+    padding: 33px 40px 32px 42px;
+    font-size: 0;
 
+    border-right: 1px solid #ececec;
     border-left: 1px solid #ececec;
   }
 
@@ -146,20 +87,11 @@
   &:focus .main-nav__icon-search {
     fill: #63d1bb;
   }
-
-  @media (min-width: @tablet-width) {
-    width: 82px;
-    height: 88px;
-
-    font-size: 0;
-
-    border-right: 1px solid #ececec;
-  }
 }
 
 .main-nav__item--basket a {
   @media (min-width: @tablet-width) {
-    padding: 32px 0 32px 82px;
+    padding: 31px 0 32px 82px;
   }
 
   &:hover .main-nav__icon-basket {
@@ -172,6 +104,63 @@
 
   &:focus .main-nav__icon-basket {
     fill: #63d1bb;
+  }
+}
+
+
+.main-nav__list-left {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__list-left a {
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+    padding-right: 36px;
+    padding-bottom: 10px;
+
+    font-size: 15px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 36px;
+  }
+}
+
+.main-nav__item--border {
+  @media (min-width: @desktop-width) {
+    position: relative;
+
+    padding-left: 36px;
+  }
+
+  &::before {
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      left: 0;
+
+      width: 1px;
+      height: 100%;
+
+      background-color: #ececec;
+
+      content: "";
+    }
+  }
+}
+
+.main-nav__list-right {
+  @media (min-width: @tablet-width) {
+    order: 2;
   }
 }
 
@@ -199,6 +188,7 @@
     order: 4;
 
     display: block;
+    padding-top: 10px;
 
     font-size: 15px;
     line-height: 24px;
@@ -243,7 +233,7 @@
     flex-shrink: 0;
     order: 1;
     width: 320px;
-    padding: 21px 0;
+    padding: 22px 0;
 
     background-color: transparent;
     box-shadow: none;
@@ -258,8 +248,15 @@
 
 .main-nav__logo img {
   @media (min-width: @tablet-width) {
+    width: 113px;
+    height: 46px;
     padding-left: 0;
     margin-left: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+    height: 72px;
   }
 }
 
@@ -270,16 +267,22 @@
   left: 33px;
 
   transform: translate(-50%, -50%);
+
+  @media(min-width: @tablet-width) {
+    fill: #d3d2d2;
+  }
 }
 
 .main-nav__icon-search {
   @media (min-width: @tablet-width) {
+    top: 45px;
     left: 50%;
   }
 }
 
 .main-nav__icon-basket {
   @media (min-width: @tablet-width) {
+    top: 43px;
     left: 41px;
   }
 }
