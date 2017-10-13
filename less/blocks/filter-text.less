@@ -1,12 +1,13 @@
 .filter-text {
+  margin-top: 25px;
+  margin-bottom: 5px;
+
   @media (min-width: @desktop-width) {
     width: 700px;
   }
 }
 
 .filter-text__item {
-  margin-bottom: 24px;
-
   @media (min-width: @tablet-width) {
     display: flex;
   }
@@ -14,7 +15,7 @@
 
 .filter-text__label {
   display: block;
-  margin-bottom: 21px;
+  margin-bottom: 13px;
 
   line-height: 18px;
 
@@ -25,11 +26,12 @@
 
 .filter-text__input {
   width: 100%;
-  margin-bottom: 41px;
+  margin-bottom: 23px;
+  padding-bottom: 14px;
 
   border-top: none;
   border-right: none;
-  border-bottom: 1px solid #000000;
+  border-bottom: 2px solid #000000;
   border-left: none;
 
   outline: none;
@@ -39,6 +41,12 @@
     line-height: 18px;
     font-weight: 400;
     color: rgba(68, 68, 68, 0.3);
+  }
+
+  &--tel,
+  &--email {
+    margin-top: 19px;
+    margin-bottom: 28px;
   }
 }
 
@@ -65,19 +73,32 @@
 }
 
 .filter-text__textarea {
-  width: 100%;
-  height: 138px;
+  width: 253px;
+  height: 134px;
+  margin-top: 21px;
 
-  border: 1px solid #000000;
+  border: 2px solid #444444;
 
   outline: none;
   resize: none;
   overflow: auto;
 
   &::placeholder {
+    padding: 12px;
+
     font-size: 17px;
     line-height: 18px;
     font-weight: 400;
+    font-family: "Open Sans", "Arial", sans-serif;
     color: rgba(68, 68, 68, 0.3);
   }
+}
+
+.filter__description {
+  margin-top: 10px;
+  margin-bottom: 31px;
+}
+
+.filter__button {
+  color: #444444;
 }
