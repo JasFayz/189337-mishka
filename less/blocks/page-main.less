@@ -3,9 +3,7 @@
   border-top: 1px solid #ececec;
 
   &--gray {
-    @media (min-width: @tablet-width) {
-      background-color: #f1f1f1;
-    }
+    background-color: #f1f1f1;
   }
 }
 
@@ -13,7 +11,7 @@
   .head-reset();
 
   min-height: 177px;
-  padding: 74px 8px 0 8px;
+  padding: 69px 8px 0 8px;
   box-sizing: border-box;
 
   font-size: 27px;
@@ -25,11 +23,15 @@
   background: #f1f1f1;
 
   @media (min-width: @tablet-width) {
-    padding-top: 102px;
-    padding-bottom: 83px;
+    padding-top: 95px;
+    padding-bottom: 92px;
+    margin-bottom: 67px;
 
     font-size: 43px;
     line-height: 50px;
+
+    background: #f1f1f1 url("../img/bg-zigzag-fill.svg") bottom center no-repeat;
+    background-size: auto 24px;
   }
 
   @media (min-width: @desktop-width) {
@@ -39,7 +41,6 @@
 
   &--index {
     min-height: 282px;
-    padding-top: 69px;
 
     background: #f1f1f1 url("../img/hero-mobile@1x.jpg") center -20px no-repeat;
 
