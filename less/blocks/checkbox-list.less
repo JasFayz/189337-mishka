@@ -1,15 +1,16 @@
 .checkbox-list {
+  margin-bottom: 38px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    width: 462px;
+    margin-bottom: 11px;
   }
-}
 
-.checkbox-list__item {
-  margin-bottom: 29px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 39px;
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    width: 728px;
   }
 }
 
@@ -25,6 +26,7 @@
   position: relative;
 
   display: block;
+  margin-top: 43px;
   padding-left: 62px;
 
   line-height: 18px;
@@ -39,7 +41,7 @@
   }
 
   &::after {
-    top: 50%;
+    top: 9px;
     left: 20px;
 
     width: 40px;
@@ -49,6 +51,14 @@
     border: 2px solid #444444;
 
     transform: translate(-50%, -50%);
+
+    @media (min-width: @tablet-width) {
+      top: 11px;
+      left: 27px;
+
+      width: 54px;
+      height: 52px;
+    }
   }
 
   &::before {
@@ -56,21 +66,59 @@
     left: 13px;
 
     display: none;
-    width: 11px;
-    height: 21px;
+    width: 10px;
+    height: 20px;
 
     border-right: 3px solid #000000;
     border-bottom: 3px solid #000000;
 
     transform: rotate(45deg);
+
+    @media (min-width: @tablet-width) {
+      bottom: 12px;
+      left: 19px;
+
+      width: 13px;
+      height: 27px;
+    }
+  }
+
+  &:hover::after {
+    border-color: #62d1ba;
+  }
+
+  &:active::after,
+  &:focus::after {
+    border-color: #c7c7c7;
   }
 
   @media (min-width: @tablet-width) {
-    width: 250px;
+    width: 200px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding-bottom: 17px;
+    padding-left: 82px;
     box-sizing: border-box;
+
+    font-size: 19px;
+    line-height: 19px;
+  }
+}
+
+.checkbox-list__item:first-child .checkbox-list__label {
+  margin-top: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.checkbox-list__item:nth-child(2n) .checkbox-list__label {
+  @media (min-width: @tablet-width) {
+    margin-left: 62px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 262px;
+    margin-left: 0;
   }
 }

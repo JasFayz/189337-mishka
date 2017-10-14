@@ -16,8 +16,18 @@
   @media (min-width: @tablet-width) {
     display: block;
     width: 102px;
-    height: 34px;
+    height: 42px;
+    padding-top: 49px;
+    padding-bottom: 60px;
+  }
 
-    background: url("../img/logo-mobile.svg") center center no-repeat;
+  &:hover .page-footer__logo-footer {
+    fill: #46c1ae;
+  }
+
+  &:active .page-footer__logo-footer,
+  &:focus .page-footer__logo-footer {
+    fill: #46c1ae;
+    opacity: 0.3;
   }
 }

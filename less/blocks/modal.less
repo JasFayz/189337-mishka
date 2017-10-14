@@ -1,8 +1,45 @@
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -1000%);
+  }
+
+  70% {
+    transform: translate(-50%, -45%);
+  }
+
+  90% {
+    transform: translate(-50%, -60%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
 .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+
+  display: none;
   width: 260px;
-  height: 338px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 37px 30px 46px 30px;
+
+  background-color: #ffffff;
+  border: 1px solid #c6c6c6;
+
+  animation: bounce 1s;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  transform: translate(-50%, -50%);
+
+  @media (min-width: @tablet-width) {
+    width: 566px;
+    padding: 38px 105px 46px 105px;
+    box-sizing: border-box;
+  }
 }
 
 .modal__close {
@@ -10,26 +47,44 @@
 }
 
 .modal__title {
+  .head-reset();
+
   font-size: 25px;
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 57px;
+  }
 }
 
 .modal__description {
+  margin-top: 17px;
+  margin-bottom: 21px;
+
   font-size: 15px;
   line-height: 30px;
   font-weight: 400;
   color: #444444;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+  }
+}
+
+.modal__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .modal__label {
-  display: inline-block;
-
   width: 82px;
   height: 52px;
-  padding: 18px 0;
+  padding: 12px 0;
   box-sizing: border-box;
 
   text-align: center;
@@ -37,17 +92,29 @@
   border: 2px solid #f2f2f2;
 
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 108px;
+    height: 48px;
+    padding: 10px 0;
+  }
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
 }
 
 .modal__input {
   display: none;
 
   &:checked + .modal__label {
-    border: 2px solid #97e0d2;
+    border-color: #97e0d2;
   }
 }
 
 .modal__button {
+  margin-top: 31px;
+
   color: #ffffff;
 
   background-color: #63d1bb;
@@ -64,4 +131,25 @@
     background-color: #59d5bc;
     outline: none;
   }
+}
+
+.modal-show {
+  display: block;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.modal-overlay-show {
+  display: block;
 }
