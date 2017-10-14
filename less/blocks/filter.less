@@ -1,5 +1,9 @@
 .filter {
   margin-bottom: 57px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 31px;
+  }
 }
 
 .filter__field {
@@ -18,13 +22,30 @@
 .filter__wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 50px;
+    margin-top: 65px;
   }
 
   @media (min-width: @desktop-width) {
     justify-content: flex-start;
+  }
+
+  &--footer {
+    @media (min-width: @tablet-width) {
+      margin-top: 53px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 49px;
+    }
+  }
+}
+
+.filter__field--email .filter__wrapper {
+  @media (min-width: @tablet-width) {
+    margin-top: 37px;
+    margin-bottom: 49px;
   }
 }
 
@@ -59,20 +80,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    text-align: center;
+    width: 175px;
+    padding-left: 62px;
+    text-align: left;
   }
 }
 
 .filter__inner {
   .list-reset();
-
-  @media (min-width: @tablet-width) {
-    width: 501px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 800px;
-  }
 }
 
 .filter__description {
@@ -83,10 +98,13 @@
 
   @media (min-width: @tablet-width) {
     order: 2;
+    margin-left: auto;
+
+    font-size: 17px;
+    line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: auto;
     margin-right: 175px;
   }
 }
