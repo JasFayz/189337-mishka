@@ -61,7 +61,7 @@ function init() { // функция - собиралка карты и фигн�
     },
     {
       iconLayout: 'default#image',
-      iconImageHref: "../img/icon-map-pin.svg", // картинка иконки
+      iconImageHref: "img/icon-map-pin.svg", // картинка иконки
       iconImageSize: [67, 100], // размер иконки
       iconImageOffset: [-20, -100], // позиция иконки
     });
