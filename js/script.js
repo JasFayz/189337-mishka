@@ -9,7 +9,7 @@ var myPlacemark0;
 var ymaps;
 
 navMain.classList.remove("main-nav--nojs");
-if (map) {
+if (ymaps !== undefined) {
   map.classList.remove("contacts__map--nojs");
 }
 
@@ -45,7 +45,7 @@ if (modal) {
     }
   });
 }
-if(ymaps !== undefined) {
+if (ymaps !== undefined) {
   ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
 }
 
