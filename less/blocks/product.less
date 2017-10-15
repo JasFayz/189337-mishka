@@ -5,13 +5,13 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    margin-top: -117px;
-    margin-bottom: 30px;
+    margin-top: -116px;
+    margin-bottom: 45px;
     padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 109px;
+    margin-bottom: 124px;
   }
 }
 
@@ -39,6 +39,7 @@
 
   &--interior:hover {
     padding-bottom: 33px;
+    margin-top: -5px;
 
     background-color: #59d5bc;
   }
@@ -63,6 +64,7 @@
 
   &--toys:hover {
     padding-bottom: 33px;
+    margin-top: -5px;
 
     background-color: #46c1ae;
   }
@@ -81,19 +83,49 @@
     fill: rgba(59, 144, 131, 0.3);
   }
 
-  @media (min-width: @tablet-width) {
+  &--interior::after,
+  &--toys::after {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      bottom: -16px;
+      left: 0;
 
+      width: 100%;
+      height: 34px;
+
+      background: url("../img/bg-zigzag-fill.svg") repeat-x;
+      background-size: 770px 24px;
+      background-position-y: center;
+
+      content: "";
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 37px;
+      bottom: -20px;
+
+      background-size: 1250px 37px;
+    }
+  }
+
+  &--interior::after {
+    @media (min-width: @tablet-width) {
+      background-position-x: 25px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-position-x: -38px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
     width: 100%;
     padding-top: 28px;
     padding-left: 35px;
-    padding-bottom: 20px;
+    padding-bottom: 29px;
 
     font-size: 20px;
     line-height: 30px;
-
-
-    border-image: url("../img/bg-zigzag-fill.svg") 100 315;
-    border-bottom: 25px solid;
   }
 }
 

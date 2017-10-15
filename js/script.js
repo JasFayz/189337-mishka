@@ -6,6 +6,7 @@ var orderLink = document.querySelector(".product-item__order");
 var map = document.querySelector(".contacts__map");
 var myMap;
 var myPlacemark0;
+var ymaps;
 
 navMain.classList.remove("main-nav--nojs");
 if (map) {
@@ -44,8 +45,9 @@ if (modal) {
     }
   });
 }
-
-ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
+if(ymaps !== undefined) {
+  ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
+}
 
 function init() { // функция - собиралка карты и фигни
   myMap = new ymaps.Map(map, { // создаем и присваиваем глобальной переменной карту и суем её в див с id="map"
