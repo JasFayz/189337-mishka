@@ -24,6 +24,8 @@
 .social__link {
   display: block;
 
+  outline: none;
+
   &--instagram {
     width: 22px;
     height: 22px;
@@ -37,6 +39,13 @@
   &--twitter {
     width: 24px;
     height: 20px;
+  }
+
+  &:focus .social__icon-insta,
+  &:focus .social__icon-fb,
+  &:focus .social__icon-twitter {
+    fill: #46c1ae;
+    opacity: 0.3;
   }
 }
 
