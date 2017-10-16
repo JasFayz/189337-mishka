@@ -95,7 +95,9 @@
 
 .main-nav__item--search a {
   @media (min-width: @tablet-width) {
+    height: 24px;
     padding: 33px 40px 32px 42px;
+
     font-size: 0;
 
     border-right: 1px solid #ececec;
@@ -196,6 +198,7 @@
   display: none;
 
   @media (min-width: @desktop-width) {
+    .list-reset();
     z-index: 100;
 
     display: flex;
