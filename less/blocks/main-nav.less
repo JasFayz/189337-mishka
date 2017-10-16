@@ -1,3 +1,24 @@
+@keyframes show {
+  0% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+    display: none;
+  }
+}
+
 .main-nav {
   display: flex;
   flex-direction: column;
@@ -40,6 +61,7 @@
   background-color: #f6f6f6;
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
   outline: none;
+  transition: 0.5s;
 
   &:hover {
     color: rgba(0, 0, 0, 0.6);
@@ -233,6 +255,7 @@
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
 
   outline: none;
+  transition: 0.5s;
 
   &:hover {
     opacity: 0.6;
@@ -283,6 +306,7 @@
   left: 33px;
 
   transform: translate(-50%, -50%);
+  transition: 0.5s;
 
   @media (min-width: @tablet-width) {
     fill: #d3d2d2;
@@ -347,7 +371,7 @@
     &::after {
       position: absolute;
 
-      width: 22px;
+      width: 25px;
       height: 10px;
       box-sizing: border-box;
 
@@ -391,6 +415,9 @@
   .main-nav--closed .main-nav__list-left,
   .main-nav--closed .main-nav__list-right {
     display: none;
+
+    animation-name: hide;
+    animation-duration: 1s;
   }
 
   .main-nav--opened.main-nav {
@@ -400,6 +427,9 @@
 
     display: block;
     width: 100%;
+
+    animation-name: show;
+    animation-duration: 1s;
   }
 
   .main-nav--nojs .main-nav__list-left,

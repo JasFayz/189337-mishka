@@ -5,6 +5,7 @@ var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var flexbugs = require("postcss-flexbugs-fixes");
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
@@ -61,7 +62,7 @@ gulp.task("webp", function() {
 });
 
 gulp.task("sprite", function() {
-  return gulp.src("img/icon-*.svg")
+  return gulp.src("img/inline-*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
