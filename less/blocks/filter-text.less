@@ -47,8 +47,9 @@
 
 .filter-text__input {
   width: 100%;
-  margin-bottom: 23px;
-  padding-bottom: 14px;
+  height: 19px;
+  margin-bottom: 22px;
+  padding-bottom: 16px;
 
   border-top: none;
   border-right: none;
@@ -56,9 +57,12 @@
   border-left: none;
 
   outline: none;
+  transition: 0.5s;
 
   @media (min-width: @tablet-width) {
     padding-left: 17px;
+
+    margin-bottom: 21px;
   }
 
   &::placeholder {
@@ -76,7 +80,7 @@
 
   &--tel,
   &--email {
-    margin-top: 19px;
+    margin-top: 18px;
     margin-bottom: 28px;
 
     @media (min-width: @tablet-width) {
@@ -115,6 +119,7 @@
   fill: #cccccc;
 
   transform: translate(-50%, -50%);
+  transition: 0.5s;
 }
 
 .filter-text__icon-phone {
@@ -152,19 +157,20 @@
 }
 
 .filter-text__textarea {
-  width: 253px;
-  height: 134px;
+  width: 260px;
+  height: 142px;
   margin-top: 21px;
+  padding: 13px;
+  box-sizing: border-box;
 
   border: 2px solid #444444;
 
   outline: none;
   resize: none;
+  transition: 0.5s;
   overflow: auto;
 
   &::placeholder {
-    padding: 12px;
-
     font-size: 17px;
     line-height: 18px;
     font-weight: 400;
@@ -184,13 +190,15 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 494px;
+    width: 501px;
 
     margin-top: -14px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 692px;
+    width: 700px;
+
+    margin-top: -16px;
   }
 }
 

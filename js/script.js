@@ -3,12 +3,14 @@ var navToggle = document.querySelector(".main-nav__toggle");
 var modal = document.querySelector(".modal");
 var modalOverlay = document.querySelector(".modal-overlay");
 var orderLink = document.querySelector(".product-item__order");
+var orderCatalogLink = document.querySelectorAll(".catalog__link");
 var map = document.querySelector(".contacts__map");
 var myMap;
 var myPlacemark0;
+var ymaps;
 
 navMain.classList.remove("main-nav--nojs");
-if (map) {
+if (ymaps !== undefined) {
   map.classList.remove("contacts__map--nojs");
 }
 
@@ -21,6 +23,7 @@ navToggle.addEventListener("click", function () {
     navMain.classList.remove("main-nav--opened");
   }
 });
+
 if (orderLink) {
   orderLink.addEventListener("click", function (event) {
     event.preventDefault();
@@ -28,6 +31,17 @@ if (orderLink) {
     modalOverlay.classList.add("modal-overlay-show");
   });
 }
+
+if(orderCatalogLink) {
+  for (var i = 0; i < orderCatalogLink.length; i++) {
+    orderCatalogLink[i].addEventListener("click", function (event) {
+      event.preventDefault();
+      modal.classList.add("modal-show");
+      modalOverlay.classList.add("modal-overlay-show");
+    });
+  }
+}
+
 if (modalOverlay) {
   modalOverlay.addEventListener("click", function (event) {
     event.preventDefault();
@@ -44,8 +58,9 @@ if (modal) {
     }
   });
 }
-
-ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
+if (ymaps !== undefined) {
+  ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
+}
 
 function init() { // функция - собиралка карты и фигни
   myMap = new ymaps.Map(map, { // создаем и присваиваем глобальной переменной карту и суем её в див с id="map"

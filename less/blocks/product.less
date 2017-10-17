@@ -5,13 +5,14 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    margin-top: -117px;
-    margin-bottom: 30px;
+    margin-top: -128px;
+    margin-bottom: 45px;
     padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 109px;
+    margin-top: -132px;
+    margin-bottom: 124px;
   }
 }
 
@@ -25,20 +26,23 @@
   position: relative;
 
   display: block;
-  padding: 25px 30px 29px 28px;
+  padding: 25px 30px 30px 28px;
   box-sizing: border-box;
 
   font-size: 19px;
   color: #ffffff;
 
   text-decoration: none;
+  outline: none;
+  transition: 0.5s;
 
   &--interior {
     background-color: #63d1bb;
   }
 
   &--interior:hover {
-    padding-bottom: 33px;
+    padding-bottom: 34px;
+    margin-top: -5px;
 
     background-color: #59d5bc;
   }
@@ -62,7 +66,8 @@
   }
 
   &--toys:hover {
-    padding-bottom: 33px;
+    padding-bottom: 34px;
+    margin-top: -5px;
 
     background-color: #46c1ae;
   }
@@ -82,18 +87,13 @@
   }
 
   @media (min-width: @tablet-width) {
-
     width: 100%;
     padding-top: 28px;
     padding-left: 35px;
-    padding-bottom: 20px;
+    padding-bottom: 29px;
 
     font-size: 20px;
     line-height: 30px;
-
-
-    border-image: url("../img/bg-zigzag-fill.svg") 100 315;
-    border-bottom: 25px solid;
   }
 }
 
@@ -102,6 +102,7 @@
   position: absolute;
 
   transform: translate(-50%, -50%);
+  transition: 0.5s;
 
   content: "";
 }

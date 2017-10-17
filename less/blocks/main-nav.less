@@ -1,3 +1,24 @@
+@keyframes show {
+  0% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+    display: none;
+  }
+}
+
 .main-nav {
   display: flex;
   flex-direction: column;
@@ -25,8 +46,9 @@
   }
 }
 
-.main-nav__item a {
+.main-nav__link {
   position: relative;
+  z-index: 100;
 
   display: block;
   padding-top: 28px;
@@ -38,6 +60,8 @@
 
   background-color: #f6f6f6;
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  outline: none;
+  transition: 0.5s;
 
   &:hover {
     color: rgba(0, 0, 0, 0.6);
@@ -56,20 +80,24 @@
   }
 }
 
-.main-nav__item--active a {
+.main-nav__link--active {
+  color: #63d1bb;
+
   &:hover {
-    color: #000000;
+    color: #63d1bb;
   }
 
   &:active,
   &:focus {
-    color: #000000;
+    color: #63d1bb;
   }
 }
 
-.main-nav__item--search a {
+.main-nav__link--search {
   @media (min-width: @tablet-width) {
+    height: 24px;
     padding: 33px 40px 32px 42px;
+
     font-size: 0;
 
     border-right: 1px solid #ececec;
@@ -87,7 +115,7 @@
   }
 }
 
-.main-nav__item--basket a {
+.main-nav__link--basket {
   @media (min-width: @tablet-width) {
     padding: 31px 0 32px 82px;
   }
@@ -121,9 +149,9 @@
   }
 }
 
-.main-nav__list-left a {
+.main-nav__list-left .main-nav__link {
   @media (min-width: @tablet-width) {
-    padding-top: 10px;
+    padding-top: 12px;
     padding-right: 36px;
     padding-bottom: 10px;
 
@@ -170,6 +198,9 @@
   display: none;
 
   @media (min-width: @desktop-width) {
+    .list-reset();
+    z-index: 100;
+
     display: flex;
     order: 4;
 
@@ -177,15 +208,17 @@
   }
 }
 
-.main-nav__list-adds a {
+.main-nav__list-adds .main-nav__link {
   @media (min-width: @desktop-width) {
-    padding-top: 16px;
+    padding-top: 18px;
     padding-right: 61px;
   }
 }
 
 .main-nav__item--delivery {
   display: none;
+
+  z-index: 100;
 
   @media (min-width: @tablet-width) {
     order: 4;
@@ -207,7 +240,7 @@
   }
 }
 
-.main-nav__item--delivery a {
+.main-nav__item--delivery .main-nav__link {
   @media (min-width: @tablet-width) {
     height: auto;
 
@@ -223,6 +256,9 @@
 
   background-color: #ffffff;
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+
+  outline: none;
+  transition: 0.5s;
 
   &:hover {
     opacity: 0.6;
@@ -273,6 +309,7 @@
   left: 33px;
 
   transform: translate(-50%, -50%);
+  transition: 0.5s;
 
   @media (min-width: @tablet-width) {
     fill: #d3d2d2;
@@ -337,7 +374,7 @@
     &::after {
       position: absolute;
 
-      width: 22px;
+      width: 25px;
       height: 10px;
       box-sizing: border-box;
 
@@ -381,6 +418,9 @@
   .main-nav--closed .main-nav__list-left,
   .main-nav--closed .main-nav__list-right {
     display: none;
+
+    animation-name: hide;
+    animation-duration: 1s;
   }
 
   .main-nav--opened.main-nav {
@@ -390,6 +430,9 @@
 
     display: block;
     width: 100%;
+
+    animation-name: show;
+    animation-duration: 1s;
   }
 
   .main-nav--nojs .main-nav__list-left,
