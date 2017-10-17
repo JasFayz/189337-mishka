@@ -204,6 +204,20 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <section class="modal">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <p class="modal__description">Выберите размер:</p>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
+        <input class="modal__input" type="radio" id="small" name="toggle" checked>
+        <label class="modal__label" for="small">S</label>
+        <input class="modal__input" type="radio" id="medium" name="toggle">
+        <label class="modal__label" for="medium">M</label>
+        <input class="modal__input" type="radio" id="large" name="toggle">
+        <label class="modal__label" for="large">L</label>
+        <button class="modal__button  button" type="submit">Добавить</button>
+      </form>
+    </section>
+    <div class="modal-overlay"></div>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

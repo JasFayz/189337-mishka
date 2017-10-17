@@ -3,6 +3,7 @@ var navToggle = document.querySelector(".main-nav__toggle");
 var modal = document.querySelector(".modal");
 var modalOverlay = document.querySelector(".modal-overlay");
 var orderLink = document.querySelector(".product-item__order");
+var orderCatalogLink = document.querySelectorAll(".catalog__link");
 var map = document.querySelector(".contacts__map");
 var myMap;
 var myPlacemark0;
@@ -22,6 +23,7 @@ navToggle.addEventListener("click", function () {
     navMain.classList.remove("main-nav--opened");
   }
 });
+
 if (orderLink) {
   orderLink.addEventListener("click", function (event) {
     event.preventDefault();
@@ -29,6 +31,17 @@ if (orderLink) {
     modalOverlay.classList.add("modal-overlay-show");
   });
 }
+
+if(orderCatalogLink) {
+  for (var i = 0; i < orderCatalogLink.length; i++) {
+    orderCatalogLink[i].addEventListener("click", function (event) {
+      event.preventDefault();
+      modal.classList.add("modal-show");
+      modalOverlay.classList.add("modal-overlay-show");
+    });
+  }
+}
+
 if (modalOverlay) {
   modalOverlay.addEventListener("click", function (event) {
     event.preventDefault();

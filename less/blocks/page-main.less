@@ -11,26 +11,24 @@
   &::after {
     @media (min-width: @tablet-width) {
       position: absolute;
-      bottom: -6px;
+      bottom: -8px;
       left: 0;
+      z-index: 101;
 
       width: 100%;
       height: 34px;
 
-      background: url("../img/bg-zigzag-fill.svg") repeat-x;
+      background: url("../img/bg-zigzag-fill.svg") center center repeat-x;
       background-size: 770px 24px;
-      background-position-y: center;
-      background-position-x: 8px;
 
       content: "";
     }
 
     @media (min-width: @desktop-width) {
       height: 37px;
-      bottom: -5px;
+      bottom: -6px;
 
-      background-size: 1150px 37px;
-      background-position-x: -25px;
+      background-size: 1250px 37px;
     }
   }
 }
