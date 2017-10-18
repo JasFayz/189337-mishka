@@ -1,12 +1,12 @@
 .info {
-  margin-bottom: 55px;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 83px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 89px;
+    margin-bottom: 33px;
     padding-left: 175px;
     box-sizing: border-box;
   }
@@ -14,14 +14,14 @@
 
 .info__title {
   margin-top: 30px;
-  margin-bottom: 86px;
+  margin-bottom: 27px;
 
   font-size: 25px;
   line-height: 30px;
 
   @media (min-width: @tablet-width) {
     margin-top: 50px;
-    margin-bottom: 104px;
+    margin-bottom: 41px;
     margin-left: -6px;
 
     font-size: 43px;
@@ -29,7 +29,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 60px;
+    margin-top: 63px;
+    margin-bottom: 43px;
 
     font-size: 53px;
     line-height: 57px;
@@ -41,25 +42,15 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
-
-.info__wrapper:first-child {
-  margin-bottom: 83px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-right: 16px;
-  }
-}
-
 
 .info__item {
   position: relative;
-  margin-bottom: 83px;
+
+  padding-top: 60px;
+  padding-bottom: 23px;
 
   line-height: 20px;
 
@@ -69,22 +60,47 @@
     content: "";
   }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   @media (min-width: @tablet-width) {
     width: 334px;
-    margin-bottom: 111px;
+    margin-bottom: 0;
+    padding-bottom: 52px;
 
     font-size: 20px;
     line-height: 22px;
+
+    &--eco {
+      order: 1;
+    }
+
+    &--price {
+      order: 3;
+    }
+
+    &--like {
+      order: 5;
+    }
+
+    &--handmade {
+      order: 2;
+    }
+
+    &--patriot {
+      order: 4;
+    }
+
+    &--gift {
+      order: 6;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 16px;
   }
 }
 
 .info__item--eco::after {
   left: 9px;
-  top: -54px;
+  top: 5px;
 
   width: 32px;
   height: 37px;
@@ -93,8 +109,8 @@
 }
 
 .info__item--price::after {
-  left: 0;
-  top: -54px;
+  left: 2px;
+  top: 6px;
 
   width: 46px;
   height: 27px;
@@ -104,7 +120,7 @@
 
 .info__item--like::after {
   left: 9px;
-  top: -49px;
+  top: 10px;
 
   width: 33px;
   height: 28px;
@@ -114,7 +130,7 @@
 
 .info__item--handmade::after {
   left: 4px;
-  top: -51px;
+  top: 8px;
 
   width: 34px;
   height: 34px;
@@ -124,7 +140,7 @@
 
 .info__item--patriot::after {
   left: -5px;
-  top: -51px;
+  top: 9px;
 
   width: 54px;
   height: 23px;
@@ -135,7 +151,7 @@
 
 .info__item--gift::after {
   left: 4px;
-  top: -54px;
+  top: 6px;
 
   width: 33px;
   height: 33px;
